@@ -1,3 +1,3 @@
 # nodeyyc
 
-This project is to learn HTML
+This project is to learn HTML.
