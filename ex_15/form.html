@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Exercise 14 - Create User</title>
+    <title>Exercise 15 - Create User</title>
     <style>
       li{
         list-style-type:none;
@@ -12,24 +12,24 @@
   <body>
     <h1>Create User</h1>
     <hr>
-    <form action="create_user.html" method="get" enctype="application/x-www-form-urlencoded">
+    <form action="create_user.html" method="get" enctype="application/x-www-form-urlencoded" >
       <p>
         <label>Username:</label>
-        <input type="text" name="username" placeholder="username" size="30" maxlength="12" />
+        <input type="text" name="username" placeholder="username" pattern="^[a-zA-Z]+$" size="30" maxlength="12" required /> *Only letters
+      </p>
+      <p>
+        <label>Password:</label>
+        <input type="password" name="password" placeholder="password" pattern="\d+" size="30" maxlength="8" required /> *Only numbers
       </p>
       <fieldset>
         <legend>User Form</legend>
-        <p>
-          <label>Password:</label>
-          <input type="password" name="password" placeholder="password" size="30" maxlength="8" />
-        </p>
         <p>
           <label for="birthdayid">Birthday:</label>
           <input type="date" id="birthdayid" name="birthday" />
         </p>
         <p>
           <label for="emailid">Email:</label>
-          <input type="email" id="emailid" name="email" />
+          <input type="email" id="emailid" name="email" required />
         </p>
         <p>
           <label for="websiteid">Personal Site:</label>
@@ -48,7 +48,7 @@
           <li><input type="checkbox" name="videogames" value="fifa" checked="checked" > Fifa</li>
           <li><input type="checkbox" name="videogames" value="nhl"> NHL</li>
           <li><input type="checkbox" name="videogames" value="resevil"> Residen Evil</li>
-          <li><input type="checkbox" name="videogames" value="uncharted" checked="checked"> Uncharted</li>
+          <li><input type="checkbox" name="videogames" value="uncharted" checked="checked" > Uncharted</li>
         </ul>
         <input type="hidden" name="userid" value="2300" >
         <p><button name="submit" alt="Submit">Submit</button></p>
